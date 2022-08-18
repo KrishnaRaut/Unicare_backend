@@ -1,6 +1,7 @@
 //to start a server we require express
 const express = require ('express');
 const cors = require ('cors');
+require('dotenv').config()
 
 const mongoose = require("mongoose");
 
@@ -42,7 +43,7 @@ app.use(checkoutRoute);
 
 
 //configuring the servers
-app.listen(90,()=>{
+app.listen(process.env.PORT,()=>{
     console.log("Server is started at: http://localhost:90/")
 })
 
