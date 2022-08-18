@@ -28,6 +28,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 // Logger
 app.use("/", function(req,res,next){
     console.log(req.method, req.url)
+    res.json('Hey Its me')
     next()
 })
 app.use(cors())
